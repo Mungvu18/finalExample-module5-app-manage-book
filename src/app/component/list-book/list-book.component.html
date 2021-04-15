@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <h1>Danh sách cuốn sách</h1>
+  </div>
+  <div>
+    <div style="float: left; width: 50%; color: red" ><h4>Có {{amountBook}} cuốn sách</h4></div>
+    <div style="float: right; width: 400px; color: red"><h4><a [routerLink]="'/create-book'">Tạo mới</a></h4></div>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col" colspan="2">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books, index as i">
+        <th scope="row">{{i+1}}</th>
+        <td><a [routerLink]="'/detail-book/'+book.id">{{book.title}}</a></td>
+        <td>{{book.author}}</td>
+        <td><a [routerLink]="'/delete-book/'+book.id">Xóa</a></td>
+        <td><a [routerLink]="'/update-book/'+book.id">Sửa</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

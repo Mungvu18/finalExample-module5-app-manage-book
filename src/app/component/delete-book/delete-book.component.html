@@ -1,0 +1,40 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eCommerce Product Detail</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+<form (ngSubmit)="deleteBook()">
+<div class="container">
+  <div class="card">
+    <div>
+      <div style="float: left;width: 50%"><h3 style="color: #0076ad">Chi tiết sách</h3></div>
+      <div style="float: right; width: 50%"><h3 style="color: #0076ad"><a [routerLink]="'/books'">Xem danh sách</a></h3></div>
+    </div>
+    <br>
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="details col-md-6">
+          <h3 class="product-title" style="color: #b36800">Tên Sách : {{book.title}}</h3>
+          <p class="product-description" style="color: #b36800">Tác giả: {{book.author}}</p>
+          <span style="color: #b36800">Mô tả:</span>
+          <p class="product-description" style="color: #b36800">{{book.description}}</p>
+          <h4 class="price">current price: <span>........</span></h4>
+          <p class="vote"><strong>100%</strong> of buyers enjoyed this product! <strong>(100 votes)</strong></p>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+</body>
+</html>
