@@ -1,4 +1,8 @@
-<form (ngSubmit)="editBook()">
+<html>
+<body>
+<div class="container">
+<form (ngSubmit)="editBook()" style="padding-top: 20px">
+  <div><h3>Trang sửa đối tượng</h3></div>
   <div class="form-group">
     <label for="title">Title</label>
     <input
@@ -21,5 +25,13 @@
       type="text" class="form-control" id="description" placeholder="Enter description">
     </textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div style="float: left; width: 210px">
+    <button type="submit" class="btn btn-primary" style="width: 200px">Cập nhật</button>
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" [routerLink]="''">Thoát</button>
+  </div>
 </form>
+</div>
+</body>
+</html>
